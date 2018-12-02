@@ -1,6 +1,6 @@
 /*
   Gridifier || Code released under the UNLICENSE
-  https://gridifier.web-dev.tools/#xs,3,0,0,0
+  https://gridifier.web-dev.tools/#xs,2,0,0,0;s,2,25,0,0;m,2,38,1,0
 */
 
 .grid {
@@ -177,66 +177,86 @@
   display: flex;
 }
 
-.unit-xs-content-distribute,
-.xs-content-distribute {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+@media only screen and (min-width: 25em) {
+
+  .unit-s-hidden,
+  .s-0 {
+    display: none;
+    visibility: hidden;
+  }
+
+  .unit-s-centered {
+    margin: 0 auto;
+  }
+
+  .unit-s-1,
+  .s-1 {
+    display: block;
+    visibility: visible;
+    width: 100%;
+  }
+
+  .unit-s-1-2,
+  .s-1-2 {
+    width: 50%;
+  }
+
+  .unit-s-1-2 {
+    display: inline-block;
+    visibility: visible;
+  }
+
+  .unit-s-1-2[class*="-content-"],
+  .s-1-2[class*="-content-"] {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
 }
 
-.unit-xs-content-center,
-.unit-xs-content-center-vertical {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-flex-direction: column wrap;
-  -ms-flex-direction: column wrap;
-  flex-flow: column wrap;
-}
+@media only screen and (min-width: 38em) {
 
-.unit-xs-content-center-horizontal {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-flex-direction: row wrap;
-  -ms-flex-direction: row wrap;
-  flex-flow: row wrap;
-}
+  .unit-m-hidden,
+  .m-0 {
+    display: none;
+    visibility: hidden;
+  }
 
-.xs-content-fill,
-.xs-content-stretch {
-  -ms-flex-grow: 2;
-  -webkit-flex-grow: 2;
-  flex-grow: 2;
-  max-width: 100%; /* @bugfix: IE 10, 11 */
-}
+  .unit-m-centered {
+    margin: 0 auto;
+  }
 
-.xs-content-shrink {
-  -ms-align-self: center;
-  -webkit-align-self: center;
-  align-self: center;
+  .unit-m-1,
+  .m-1 {
+    display: block;
+    visibility: visible;
+    width: 100%;
+  }
+
+  .unit-offset-m-0 {
+    margin-left: 0;
+  }
+
+  .unit-m-1-2,
+  .m-1-2 {
+    width: 50%;
+  }
+
+  .unit-offset-m-1-2 {
+    margin-left: 50%;
+  }
+
+  .unit-m-1-2 {
+    display: inline-block;
+    visibility: visible;
+  }
+
+  .unit-m-1-2[class*="-content-"],
+  .m-1-2[class*="-content-"] {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
 }
